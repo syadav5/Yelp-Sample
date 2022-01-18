@@ -1,7 +1,5 @@
 package com.rbc.yelp.services;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.rbc.yelp.BuildConfig;
@@ -13,7 +11,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import timber.log.Timber;
 
 public class YelpRetrofit {
 
@@ -23,7 +20,6 @@ public class YelpRetrofit {
         return new Retrofit.Builder()
                 .client(new OkHttpClient.Builder()
                         .addInterceptor(new ApiKeyInterceptor())
-                       // .addInterceptor(new LoggingInterceptor())
                         .build())
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -38,20 +34,6 @@ public class YelpRetrofit {
                     .newBuilder()
                     .addHeader("Authorization", "Bearer " + BuildConfig.API_KEY)
                     .build());
-        }
-    }
-
-    private static class LoggingInterceptor implements Interceptor {
-
-        public static final String TAG = LoggingInterceptor.class.getSimpleName();
-
-        @Override
-        public @NonNull Response intercept(Chain chain) throws IOException {
-            StringBuilder sb = new StringBuilder();
-            sb.append(chain.request().headers()).append("\n").append(chain.request().body());
-            //System.out.println("Request Data: "+sb.toString());
-            Timber.d(sb.toString());
-            return chain.proceed(chain.request());
         }
     }
 }
