@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Yelp Sample</string>
+    <string name="rating_content_desc">%1$f rating</string>
+    <string name="review_content_desc">%1$d reviews</string>
+    <string name="no_rating">No ratings available</string>
+    <string name="no_review">No reviews available</string>
+    <string name="closed">Closed</string>
+    <string name="open">Open</string>
+    <string name="call">Call %1$s</string>
+    <string name="search_title">Search Yelp</string>
+    <string name="error_title">Error</string>
+    <string name="no_data_found">No data found</string>
+    <string name="Ok">Ok</string>
+    <string name="error_message">Oops! Something unexpected happened while searching. Please select a different search term or location.</string>
+    <string name="location_field_hint">"e.g. City or Neighbourhood "</string>
+    <string name="search_term_hint">e.g. restaurants, Starbucks</string>
+    <string name="clear">Clear Text</string>
+    <string name="search">Search</string>
+</resources>

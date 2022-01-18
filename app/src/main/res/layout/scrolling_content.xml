@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_12">
+
+            <ImageView
+                android:id="@+id/ratingsImgView"
+                android:layout_width="@dimen/ratingImageWidth"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_12"
+                android:layout_marginLeft="@dimen/dimen_12"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/stars_small_3_half" />
+
+            <TextView
+                android:id="@+id/categoriesTv"
+                style="@style/details_data_style"
+                tools:text="Food, Halal, Middle" />
+
+            <TextView
+                android:id="@+id/addressTv"
+                style="@style/details_data_style"
+                tools:text="Food Stands\nHala\nMiddle" />
+
+            <TextView
+                android:id="@+id/phoneTv"
+                style="@style/details_data_style"
+                tools:text="Call (918) 200-7748" />
+
+            <TextView
+                android:id="@+id/openOrCloseTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_12"
+                android:textColor="@color/green"
+                android:textSize="@dimen/dimen_12"
+                android:textStyle="bold"
+                tools:text="Open" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

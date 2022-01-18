@@ -1,0 +1,9 @@
+<resources>
+
+    <declare-styleable name="ClearableEditText">
+        <attr format="string" name="text"/>
+        <attr format="reference" name="startIcon"/>
+        <attr format="reference" name="clearIcon" />
+        <attr name="hint" format="string" />
+    </declare-styleable>
+</resources>
