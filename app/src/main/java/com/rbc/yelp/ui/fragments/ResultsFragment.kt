@@ -1,6 +1,7 @@
 package com.rbc.yelp.ui.fragments
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -76,7 +77,11 @@ class ResultsFragment : BaseFragment() {
     }
 
     private fun getScreenTitle(searchTerm: String?, selectedLocation: String?): String =
-        "$searchTerm $selectedLocation"
+        if (!TextUtils.isEmpty(searchTerm)) {
+            "$searchTerm, $selectedLocation"
+        } else {
+            "$selectedLocation"
+        }
 
     override fun onDestroy() {
         super.onDestroy()

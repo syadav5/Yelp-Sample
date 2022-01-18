@@ -77,6 +77,7 @@ class ClearableEditText @JvmOverloads constructor(
         startIcon = findViewById(R.id.startIcon)
         clearIcon = findViewById(R.id.clearIcon)
         editText = findViewById(R.id.inputEditText)
+        editText.isSaveEnabled = false
         addEditTextWatcher()
     }
 
